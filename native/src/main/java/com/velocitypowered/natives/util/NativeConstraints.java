@@ -55,6 +55,10 @@ public class NativeConstraints {
       && System.getProperty("os.name", "").equalsIgnoreCase("Linux")
       && IS_AARCH64;
 
+  static final BooleanSupplier LINUX_AARCH32 = () -> NATIVE_BASE.getAsBoolean()
+      && System.getProperty("os.name", "").equalsIgnoreCase("LINUX")
+      && !IS_AARCH64;
+
   static final BooleanSupplier MACOS_AARCH64 = () -> NATIVE_BASE.getAsBoolean()
       && System.getProperty("os.name", "").equalsIgnoreCase("Mac OS X")
       && IS_AARCH64;
