@@ -89,8 +89,8 @@ public class Natives {
               "libdeflate (Linux aarch64)",
               LibdeflateVelocityCompressor.FACTORY), // compiled with Fedora 36
           new NativeCodeLoader.Variant<>(NativeConstraints.LINUX_AARCH32,
-              copyAndLoadNative("/data/data/com.termux/files/usr/lib/velocity-compress.so"),
-              "libdeflate (Linux aarch32 Termux)",
+              copyAndLoadNative("/linux_aarch32/velocity-compress.so"),
+              "libdeflate (Linux aarch32)",
               LibdeflateVelocityCompressor.FACTORY), // compiled with Fedora 36
           new NativeCodeLoader.Variant<>(NativeConstraints.MACOS_AARCH64,
               copyAndLoadNative("/macos_arm64/velocity-compress.dylib"),
