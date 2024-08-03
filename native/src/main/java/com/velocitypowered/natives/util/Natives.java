@@ -123,7 +123,7 @@ public class Natives {
               copyAndLoadNative("/linux_aarch64/velocity-cipher-ossl11x.so"),
               "OpenSSL 1.1.x (Linux aarch64)", NativeVelocityCipher.FACTORY), // Debian 11
 
-		  new NativeCodeLoader.Variant<>(NativeConstraints.LINUX_AARCH32,
+          new NativeCodeLoader.Variant<>(NativeConstraints.LINUX_AARCH32,
               copyAndLoadNative("/linux_aarch32/velocity-cipher.so"),
               "OpenSSL (Linux aarch32)", NativeVelocityCipher.FACTORY), // Termux
 
