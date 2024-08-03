@@ -91,7 +91,7 @@ public class Natives {
           new NativeCodeLoader.Variant<>(NativeConstraints.LINUX_AARCH32,
               copyAndLoadNative("/linux_aarch32/velocity-compress.so"),
               "libdeflate (Linux aarch32)",
-              LibdeflateVelocityCompressor.FACTORY), // compiled with Fedora 36
+              LibdeflateVelocityCompressor.FACTORY), // compiled with Termux
           new NativeCodeLoader.Variant<>(NativeConstraints.MACOS_AARCH64,
               copyAndLoadNative("/macos_arm64/velocity-compress.dylib"),
               "libdeflate (macOS ARM64 / Apple Silicon)",
@@ -122,6 +122,10 @@ public class Natives {
           new NativeCodeLoader.Variant<>(NativeConstraints.LINUX_AARCH64,
               copyAndLoadNative("/linux_aarch64/velocity-cipher-ossl11x.so"),
               "OpenSSL 1.1.x (Linux aarch64)", NativeVelocityCipher.FACTORY), // Debian 11
+
+		  new NativeCodeLoader.Variant<>(NativeConstraints.LINUX_AARCH32,
+              copyAndLoadNative("/linux_aarch32/velocity-cipher.so"),
+              "OpenSSL (Linux aarch32)", NativeVelocityCipher.FACTORY), // Termux
 
           new NativeCodeLoader.Variant<>(NativeConstraints.MACOS_AARCH64,
               copyAndLoadNative("/macos_arm64/velocity-cipher.dylib"),
